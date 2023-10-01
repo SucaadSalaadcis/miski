@@ -5,10 +5,12 @@ const questionSche = new mongoose.Schema({
         type: String,
     },
     subjectID:{
-        type: Number,
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"subjectrout"
     },
     userID:{
-        type: Number,
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"userrout"
     }
 
 },{timestamps: true});
