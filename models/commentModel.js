@@ -2,10 +2,12 @@ const mongoose = require("mongoose");
 
 const commentSche = new mongoose.Schema({
     questionID:{
-        type: Number,
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"questionRoute"
     },
-    userID: {
-        type: Number,
+    userID:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref:"userrout"
     },
     comment: {
         type: String,
