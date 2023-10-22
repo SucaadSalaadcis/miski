@@ -1,5 +1,6 @@
 const DB = require("mongoose");
-
+DB.set('strictQuery', false);
+require('dotenv').config()
 const dbConnect = async () => {
     try {
         await DB.connect(process.env.DB_URL)
@@ -10,3 +11,4 @@ const dbConnect = async () => {
 }
 
 module.exports = dbConnect;
+

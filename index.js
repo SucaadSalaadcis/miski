@@ -1,5 +1,5 @@
 const express = require("express");
-const DB = require("mongoose");
+const cors = require('cors')
 const app = express();
 require('dotenv').config();
 
@@ -7,6 +7,7 @@ const dbConnect = require("./dbCon");
 dbConnect();
 
 app.use(express.json());
+app.use(cors())
 
 
 // routes
